@@ -74,13 +74,13 @@ class LaplaceApproximation:
         self.cov = cov
         return self.laplace_approx
 
-    def plot_approx_posterior(self, x=jnp.linspace(-5, 5, 1000), true_posterior=None):
+    def plot_approx_posterior(self, x=jnp.linspace(-5, 5, 1000), true_posterior=None, Color= 'orange', Label='True Posterior'):
         if self.laplace_approx is None:
             raise ValueError("Run approx_posterior first")
         x = x.reshape(-1, 1)
         fig = plt.figure()
         if true_posterior is not None:
-            plt.plot(x, true_posterior.prob(x), label="true_posterior", color="orange")
+            plt.plot(x, true_posterior.prob(x), label=Label, color=Color)
         plt.plot(
             x,
             self.laplace_approx.prob(x),
@@ -104,7 +104,7 @@ class LaplaceApproximation:
         fig = plt.figure()
         if true_posterior is not None:
             plt.plot(
-                x, true_posterior.log_prob(x), label="true_posterior", color="orange"
+                x, true_posterior.log_prob(x), label="True Posterior", color="orange"
             )
         plt.plot(
             x,
