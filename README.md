@@ -1,5 +1,5 @@
 # LAZoo
-LAZoo - Laplace Approximation Zoo. This repository contains the implementations of Laplace Approximation from major research papers and the Change of Variable method for tackling constrained datasets in JAX. This work was done as a part of development of the Bijax library.
+LAZoo - Laplace Approximation Zoo. This repository contains the implementations of Laplace Approximation from major research papers and the Change of Variable method for tackling constrained datasets in JAX. This work was done as a part of development of the [Bijax library](https://github.com/patel-zeel/bijax).
 
 ## Results obtained: 
 ### Coin Toss problem: 
